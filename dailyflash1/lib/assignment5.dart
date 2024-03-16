@@ -1,4 +1,4 @@
-//container in the center with rounded corners and shadown of red color
+//container in the center with rounded corners and shadow of red color
 
 import 'package:flutter/material.dart';
 
@@ -22,7 +22,7 @@ class _Assignment5State extends State<Assignment5> {
           ),
         ),
         title: const Text(
-          "Assignment 4",
+          "Assignment 5",
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 30,
@@ -35,12 +35,18 @@ class _Assignment5State extends State<Assignment5> {
           height: 300,
           margin: const EdgeInsets.all(10),
           padding: const EdgeInsets.all(5),
-          decoration: BoxDecoration(
-            color: Colors.blueAccent,
-            border: Border.all(
-              color: Colors.red,
-              width: 10,
+          decoration: const BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.red,
+                offset: Offset(10, 10),
+                blurRadius: 20,
+              ),
+            ],
+            borderRadius: BorderRadius.all(
+              Radius.circular(20),
             ),
+            color: Colors.blueAccent,
           ),
         ),
       ),
