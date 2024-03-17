@@ -27,9 +27,19 @@ class _Assignment1State extends State<Assignment1> {
           width: 200,
           height: 200,
           decoration: BoxDecoration(
+            color: Colors.lightBlueAccent,
+            borderRadius: const BorderRadius.all(
+              Radius.circular(20),
+            ),
             border: Border.all(
               color: Colors.redAccent,
               width: 5,
+            ),
+          ),
+          child: const Center(
+            child: Text(
+              "Hello!",
+              textAlign: TextAlign.center,
             ),
           ),
         ),
