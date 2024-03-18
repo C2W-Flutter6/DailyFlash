@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dailyflash3/assignment5.dart';
+import 'package:dailyflash5/assignment5.dart';
 
 void main() {
   runApp(const MainApp());
