@@ -21,13 +21,35 @@ class _Assignment1State extends State {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(bottom: 20),
-        child: Image.network(
-          "https://nomoneynotime.com.au/uploads/recipes/shutterstock_2042520416-1.jpg",
-          height: 300,
-          width: 1000,
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          SizedBox(
+            height: 300,
+            child: FittedBox(
+              fit: BoxFit.fill,
+              child: Image.network(
+                "https://nomoneynotime.com.au/uploads/recipes/shutterstock_2042520416-1.jpg",
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              "PIZZA",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              "A large circle of flat bread baked with cheese, tomatoes, and egetables spread on top.",
+            ),
+          ),
+        ],
       ),
     );
   }
