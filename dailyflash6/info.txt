@@ -1,0 +1,8 @@
+This folder consists of Assignments which cover the concept of Padding.
+
+Assignment 1: Pizza image with topic name and description.
+Assignment 2: Container with rounded borders only at the bottom + a button with the text "Add to Cart"
+Assignment 3: 4 different colored boxes appropriately spaced on the screen.
+Assignment 4: 2 different Colored boxed with borders which show padding and margin area.
+Assignment 5: 3 containers placed vertically. Initially the color should be white. On tapping a container, the 
+color of that particular container should change to red. 
