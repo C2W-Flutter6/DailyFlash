@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dailyflash6/assignment2.dart';
+import 'package:dailyflash6/assignment3.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,7 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Assignment2(),
+      home: Assignment3(),
       debugShowCheckedModeBanner: false,
     );
   }
