@@ -1,0 +1,21 @@
+The assignments covered in this dailyflash mainly cover the properties of ROW.
+
+Assignment 1 : 3 containers in a row. (Container 1 -> h:100, w:100 , Container2 -> h:80, w:80 , Container3 -> h:70, w:80 , color as per choice)
+
+Assignment 2 : Create a Screen that displays an Icon widget representing a star the size of the
+icon must be 40 and the color of the icon must be orange, beside the icon place a
+Text widget with the content "Rating: 4.5". Apply a font size of 25 and bold
+weight to the text. Refer to below image.
+
+Assignment 3 : Create a Screen with two horizontally aligned containers at the center of the
+screen. Apply a shadow to each container set individual colors and give a border
+to the Containers only the bottom edges of the container must be rounded.
+
+Assignment 4 : Create a Screen in which we have 3 containers placed in a Row, the space
+taken by the containers must be in proportion 6:3:1. The container must have a height of 100 don’t give width to the Container
+
+Assignment 5 : In the above question now take 3 rows, the first row must be the same. In
+2nd Row place 3 Containers the space taken by them must be in a ratio of
+5:4:1 and The 3 containers in last row must take space in a ratio of 7:2:1.
+Each Container must have a height of 100 and must have a color of your
+choice. Do not specify the width of the container
