@@ -22,8 +22,8 @@ class _Assignment4State extends State {
         centerTitle: true,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(20),
-            bottomRight: Radius.circular(20),
+            bottomLeft: Radius.circular(18),
+            bottomRight: Radius.circular(18),
           ),
         ),
       ),
