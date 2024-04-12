@@ -8,64 +8,6 @@ class Assignment2 extends StatefulWidget {
 }
 
 class _Assignment2State extends State {
-  final List<Map<String, String>> foodItems = [
-    {
-      "name": "Pizza ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Burger ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Rice ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Milk ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Chicken ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Mushrooms ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Oranges ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Pasta ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Paneer ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Donut ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    },
-    {
-      "name": "Cheesecakes ",
-      "imageUrl":
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg",
-    }
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,58 +29,294 @@ class _Assignment2State extends State {
           ),
         ),
       ),
-      body: ScrollConfiguration(
-        behavior: ScrollConfiguration.of(context)
-            .copyWith(physics: const NeverScrollableScrollPhysics()),
-        child: ListView.builder(
-          physics: const AlwaysScrollableScrollPhysics(),
-          shrinkWrap: true,
+      body: Container(
+        height: 250,
+        child: ListView(
           scrollDirection: Axis.horizontal,
-          itemCount: foodItems.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.all(10),
+          keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Column(
                 children: [
                   Container(
                     height: 200,
-                    width: 250,
+                    width: 200,
                     decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(Radius.circular(20)),
-                      border: Border.all(
-                        width: 2,
-                        color: Colors.black,
-                      ),
-                      image: DecorationImage(
-                        image: NetworkImage(foodItems[index]["imageUrl"]!),
-                        fit: BoxFit.fill,
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                  const SizedBox(height: 12.0),
-                  Container(
-                    width: 250,
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(Radius.circular(20)),
-                      border: Border.all(
-                        width: 1.5,
-                        color: Colors.black,
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        foodItems[index]["name"]!,
-                        style: const TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "Pizza",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
-            );
-          },
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "Burger",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "Fruits",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "Pasta",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "Rice",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "Maggi",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "cheesecake",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "Donuts",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "Bread",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  Container(
+                    height: 200,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey[300],
+                      image: const DecorationImage(
+                        image: NetworkImage(
+                            "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8.0),
+                  const Text(
+                    "Fruits",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // Add more images and text widgets for other food items similarly
+          ],
         ),
       ),
     );
