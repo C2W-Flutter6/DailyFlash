@@ -1,0 +1,15 @@
+This folder has assignments related to basic Containers and some of ListView.
+
+Assignment 1: 5 different colored Containers of Screen with proper padding. There are 3 rows.
+ 1st and 3rd rows have 2 containers and the 2nd row(middle row) had 1 container.
+
+Assignment 2: Horizontal ListView with 10 different food items. Image above and a 
+text(title is the food item name) below the food item image.
+
+Assignment 3: 3 containers, in the center of the screen, with rounded corners from different sides.
+
+Assignment 4: ListView with 10 items. Each item has an image on the left side and a name on the right side.
+
+Assignment 5: ListView with 10 items. Each item has:
+i. Title and description on left side (below each other).
+ii. Icon on the right side.
