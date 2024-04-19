@@ -35,62 +35,50 @@ class _Assignment2State extends State {
           return Padding(
             padding: const EdgeInsets.all(10),
             child: Container(
-              width: double.infinity,
-              height: 125,
+              height: 100,
               decoration: BoxDecoration(
                 border: Border.all(
                   width: 1.5,
                   color: Colors.black,
                 ),
               ),
-              child: Row(
+              child: Column(
                 children: [
-                  Column(
+                  Row(
                     children: [
-                      Container(
-                        padding: const EdgeInsets.all(7),
-                        margin: const EdgeInsets.only(
-                          left: 100,
-                          top: 15,
+                      Expanded(
+                        child: Container(
+                          padding: const EdgeInsets.only(
+                            left: 50,
+                            top: 10,
+                          ),
+                          child: Image.network(
+                              height: 80,
+                              width: 80,
+                              "https://trademaklogos.s3.ap-south-1.amazonaws.com/5793236.jpeg"),
                         ),
-                        width: 100,
-                        height: 100,
-                        child: Image.network(
-                            fit: BoxFit.cover,
-                            "https://trademaklogos.s3.ap-south-1.amazonaws.com/5793236.jpeg"),
                       ),
-                    ],
-                  ),
-                  const SizedBox(
-                    width: 8,
-                  ),
-                  Column(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(7),
-                        margin: const EdgeInsets.only(
-                          right: 50,
-                          left: 80,
-                          top: 15,
-                        ),
-                        width: 180,
-                        height: 90,
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(20),
+                      const Spacer(),
+                      Expanded(
+                        child: Container(
+                          margin: const EdgeInsets.only(
+                            // top: 10,
+                            right: 20,
                           ),
-                          border: Border.all(
-                            width: 1.5,
-                            color: Colors.black,
-                          ),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            "Core2web",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w700,
+                          width: 200,
+                          height: 60,
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(10),
                             ),
+                            border: Border.all(
+                              width: 1.5,
+                              color: Colors.black,
+                            ),
+                          ),
+                          alignment: Alignment.center,
+                          child: const Text(
+                            "Core2Web",
                           ),
                         ),
                       ),
