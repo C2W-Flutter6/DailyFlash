@@ -15,7 +15,10 @@ class _Assignment1State extends State {
       appBar: AppBar(
         title: const Text(
           "Assignment 1",
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+          style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.w500,
+          ),
         ),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 107, 171, 224),
@@ -39,6 +42,7 @@ class _Assignment1State extends State {
               });
             },
             decoration: InputDecoration(
+              hintText: "Tap for borderColor Change",
               border: OutlineInputBorder(
                 borderSide: BorderSide(color: _borderColor),
                 borderRadius: BorderRadius.circular(20),
