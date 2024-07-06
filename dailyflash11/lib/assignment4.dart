@@ -7,14 +7,11 @@ class Assignment4 extends StatefulWidget {
   State createState() => _Assignment4State();
 }
 
-class _Assignment4State extends State {
-  final int _maxLength = 20;
+class _Assignment4State extends State<Assignment4> {
   final TextEditingController _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    _controller.addListener(() {
-      setState(() {});
-    });
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -34,26 +31,15 @@ class _Assignment4State extends State {
         ),
       ),
       body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextField(
-              controller: _controller,
-              maxLength: _maxLength,
-              decoration: InputDecoration(
-                labelText: 'Enter text',
-                border: OutlineInputBorder(),
-              ),
+        child: Container(
+          child: TextField(
+            controller: _controller,
+            maxLength: 20,
+            decoration: const InputDecoration(
+              labelText: 'Enter text',
+              border: OutlineInputBorder(),
             ),
-            SizedBox(height: 8),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                '${_controller.text.length}/$_maxLength',
-                style: TextStyle(color: Colors.grey),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
