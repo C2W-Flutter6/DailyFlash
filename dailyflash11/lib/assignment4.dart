@@ -32,6 +32,8 @@ class _Assignment4State extends State<Assignment4> {
       ),
       body: Center(
         child: Container(
+          padding: const EdgeInsets.all(5),
+          width: 250,
           child: TextField(
             controller: _controller,
             maxLength: 20,
