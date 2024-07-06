@@ -23,7 +23,7 @@ class _Assignment2State extends State {
         ),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(10),
             bottomRight: Radius.circular(10),
@@ -33,7 +33,7 @@ class _Assignment2State extends State {
       body: Center(
         child: Container(
           width: 250,
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: TextField(
             onTap: () {
               setState(() {
@@ -48,7 +48,7 @@ class _Assignment2State extends State {
             //otherwise only "lock icon" which is if _isTapped is false(original gloabally defined.)
             decoration: InputDecoration(
               suffixIcon: _isTapped
-                  ? Row(
+                  ? const Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Icon(Icons.search),
@@ -58,7 +58,7 @@ class _Assignment2State extends State {
                         Icon(Icons.lock),
                       ],
                     )
-                  : Icon(Icons.lock),
+                  : const Icon(Icons.lock),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
