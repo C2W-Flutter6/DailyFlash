@@ -58,16 +58,6 @@ class _Assignment3State extends State<Assignment3> {
     }
   }
 
-  String? emailValidator(String? value) {
-    final RegExp emailExp = RegExp(r'^[a-z0-9._%+-]+@gmail\.com$');
-    if (value == null ||
-        !emailExp.hasMatch(value) ||
-        value != value.toLowerCase()) {
-      return 'Enter a valid email address ending with @gmail.com in lowercase.';
-    }
-    return null;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,7 +119,16 @@ class _Assignment3State extends State<Assignment3> {
                       ),
                     ),
                   ),
-                  validator: emailValidator,
+                  validator: (value) {
+                    final RegExp emailExp =
+                        RegExp(r'^[a-z0-9._%+-]+@gmail\.com$');
+                    if (value == null ||
+                        !emailExp.hasMatch(value) ||
+                        value != value.toLowerCase()) {
+                      return 'Enter a valid email address \nEnding with @gmail.com in lowercase.';
+                    }
+                    return null;
+                  },
                 ),
               ),
               const SizedBox(
