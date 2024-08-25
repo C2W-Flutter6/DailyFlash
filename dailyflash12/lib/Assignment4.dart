@@ -42,6 +42,12 @@ class _Assignment4State extends State<Assignment4> {
     }
   }
 
+  void clearList() {
+    setState(() {
+      _userInputs.clear();
+    });
+  }
+
   void clearFields() {
     _nameController.clear();
     _collegeController.clear();
@@ -136,15 +142,30 @@ class _Assignment4State extends State<Assignment4> {
                 },
               ),
             ),
-            // Submit button
-            ElevatedButton(
-              onPressed: _submitForm,
-              child: const Text(
-                "Submit",
-                style: TextStyle(
-                  fontSize: 16,
+            // Submit button and Clear Button
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: _submitForm,
+                  child: const Text(
+                    "Submit",
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
                 ),
-              ),
+                SizedBox(width: 40),
+                ElevatedButton(
+                  onPressed: clearList,
+                  child: const Text(
+                    "Clear List",
+                    style: TextStyle(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 20),
             // Display user inputs in a ListView
