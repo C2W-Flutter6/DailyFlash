@@ -9,10 +9,11 @@ class Assignment1 extends StatefulWidget {
 
 class _Assignment1State extends State<Assignment1> {
   bool isPasswordVisible = false;
-  Icon passwordIcon = Icon(
+  Icon passwordIcon = const Icon(
     Icons.visibility_off,
-    color: Colors.black54,
+    color: Colors.grey,
   );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,26 +33,23 @@ class _Assignment1State extends State<Assignment1> {
       ),
       body: Center(
         child: TextField(
+          obscureText: !isPasswordVisible,
           decoration: InputDecoration(
             suffixIcon: IconButton(
               onPressed: () {
                 setState(() {
                   isPasswordVisible = !isPasswordVisible;
-                  if (isPasswordVisible) {
-                    passwordIcon = Icon(
-                      Icons.visibility,
-                      color: Colors.grey,
-                    );
-                  } else {
-                    Icon(Icons.visibility_off, color: Colors.grey);
-                  }
+                  passwordIcon = Icon(
+                    isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+                    color: Colors.grey,
+                  );
                 });
               },
               icon: passwordIcon,
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(color: Colors.black26),
+              borderSide: const BorderSide(color: Colors.black26),
             ),
           ),
         ),
