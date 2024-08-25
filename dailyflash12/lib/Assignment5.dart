@@ -10,6 +10,7 @@ class Assignment5 extends StatefulWidget {
 
 class _Assignment5State extends State<Assignment5> {
   TextEditingController dateController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +35,21 @@ class _Assignment5State extends State<Assignment5> {
         child: Container(
           margin: EdgeInsets.all(20),
           child: TextFormField(
-            onTap: () {},
+            controller: dateController,
+            onTap: () async {
+              DateTime? pickedDate = await showDatePicker(
+                context: context,
+                initialDate: DateTime.now(),
+                firstDate: DateTime(2000),
+                lastDate: DateTime(2030),
+              );
+              if (pickedDate != null) {
+                String formattedDate = DateFormat.yMMMd().format(pickedDate);
+                setState(() {
+                  dateController.text = formattedDate;
+                });
+              }
+            },
             cursorHeight: 20,
             cursorColor: const Color.fromARGB(255, 49, 156, 198),
             decoration: InputDecoration(
@@ -43,20 +58,22 @@ class _Assignment5State extends State<Assignment5> {
                   DateTime? pickedDate = await showDatePicker(
                     context: context,
                     initialDate: DateTime.now(),
-                    firstDate: DateTime(2024),
-                    lastDate: DateTime(2024),
+                    firstDate: DateTime(2000),
+                    lastDate: DateTime(2030),
                   );
-                  String formatedDate = DateFormat.yMMMd().format(pickedDate!);
-                  setState(() {
-                    dateController.text = formatedDate;
-                  });
+                  if (pickedDate != null) {
+                    String formattedDate =
+                        DateFormat.yMMMd().format(pickedDate);
+                    setState(() {
+                      dateController.text = formattedDate;
+                    });
+                  }
                 },
                 icon: Icon(Icons.calendar_month),
               ),
               labelText: 'Enter Date',
               labelStyle: const TextStyle(
                 fontSize: 20,
-                //color: const Color.fromARGB(255, 241, 109, 239),
               ),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
